@@ -1,4 +1,4 @@
-#============== KINDLY RUN BELLOW COMMAND========== 
+#============== KINDLY RUN BELLOW COMMAND==========
 # $env:ARM_SUBSCRIPTION_ID = (az account show --query id -o tsv)
 
 

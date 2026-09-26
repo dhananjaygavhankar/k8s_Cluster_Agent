@@ -1,4 +1,4 @@
-# Resource Group Creation module 
+# Resource Group Creation module
 
 module "rg" {
   source      = "../Child/rf"
@@ -6,7 +6,7 @@ module "rg" {
   rg_location = var.rg_location
 }
 
-# Kubernates cluster creation 
+# Kubernates cluster creation
 module "aks" {
   source       = "../Child/aks"
   depends_on   = [module.rg, module.vnet]
@@ -20,7 +20,7 @@ module "aks" {
   acr_name     = var.acr_name
 }
 
-# Vnet and Subnet creation 
+# Vnet and Subnet creation
 module "vnet" {
   source      = "../Child/vlan"
   depends_on  = [module.rg]
