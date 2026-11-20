@@ -1,0 +1,356 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="HeaderStyle">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2" ss:Color="#1F4E79"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#1F4E79"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#1F4E79"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#1F4E79"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="11" ss:Color="#FFFFFF" ss:Bold="1"/>
+   <Interior ss:Color="#1F4E79" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="Top5Style">
+   <Alignment ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#D9D9D9"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="11" ss:Color="#006100" ss:Bold="1"/>
+   <Interior ss:Color="#C6EFCE" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="DataStyle">
+   <Alignment ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#D9D9D9"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="10" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="NumberStyle">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#D9D9D9"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="10" ss:Color="#000000"/>
+   <NumberFormat ss:Format="#,##0.00"/>
+  </Style>
+  <Style ss:ID="VerdictStrongBuy">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#D9D9D9"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="10" ss:Color="#006100" ss:Bold="1"/>
+   <Interior ss:Color="#C6EFCE" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="VerdictAccumulate">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#D9D9D9"/>
+   </Borders>
+   <Font ss:FontName="Calibri" ss:Size="10" ss:Color="#9C6500" ss:Bold="1"/>
+   <Interior ss:Color="#FFEB9C" ss:Pattern="Solid"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Top_Stock_Recommendations">
+  <Table ss:DefaultColumnWidth="100" ss:DefaultRowHeight="22">
+   <Column ss:Width="40"/>
+   <Column ss:Width="180"/>
+   <Column ss:Width="70"/>
+   <Column ss:Width="75"/>
+   <Column ss:Width="50"/>
+   <Column ss:Width="85"/>
+   <Column ss:Width="75"/>
+   <Column ss:Width="75"/>
+   <Column ss:Width="65"/>
+   <Column ss:Width="65"/>
+   <Column ss:Width="85"/>
+   <Column ss:Width="85"/>
+   <Column ss:Width="110"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="80"/>
+   <Column ss:Width="110"/>
+   <Column ss:Width="150"/>
+   <Column ss:Width="250"/>
+   <Row ss:Height="26">
+    <Cell ss:StyleID="HeaderStyle"><Data ss:Type="String">Rank</Data></Cell>
+    <Cell ss:StyleID="HeaderStyle"><Data ss:Type="String">Company Name</Data></Cell>
+    <Cell ss:StyleID="HeaderStyle"><Data ss:Type="String">Ticker</Data></Cell>
+    <Cell ss:StyleID="HeaderStyle"><Data ss:Type="String">CMP (₹)</Data></Cell>
+    <Cell ss:StyleID="HeaderStyle"><Data ss:Type="String">P/E</Data></Cell>
+    <Cell ss:StyleID="HeaderStyle"><Data ss:Type="String">Mcap (₹ Cr)</Data></Cell>
+    <Cell ss:StyleID="HeaderStyle"><Data ss:Type="String">Qtr Profit Var %</Data></Cell>
+    <Cell ss:StyleID="HeaderStyle"><Data ss:Type="String">Qtr Sales Var %</Data></Cell>
+    <Cell ss:StyleID="HeaderStyle"><Data ss:Type="String">ROCE %</Data></Cell>
+    <Cell ss:StyleID="HeaderStyle"><Data ss:Type="String">ROE %</Data></Cell>
+    <Cell ss:StyleID="HeaderStyle"><Data ss:Type="String">Stage 2 (/560)</Data></Cell>
+    <Cell ss:StyleID="HeaderStyle"><Data ss:Type="String">Stage 3 Risk</Data></Cell>
+    <Cell ss:StyleID="HeaderStyle"><Data ss:Type="String">Verdict</Data></Cell>
+    <Cell ss:StyleID="HeaderStyle"><Data ss:Type="String">Entry Zone</Data></Cell>
+    <Cell ss:StyleID="HeaderStyle"><Data ss:Type="String">Stop Loss</Data></Cell>
+    <Cell ss:StyleID="HeaderStyle"><Data ss:Type="String">Target 1</Data></Cell>
+    <Cell ss:StyleID="HeaderStyle"><Data ss:Type="String">Target 2</Data></Cell>
+    <Cell ss:StyleID="HeaderStyle"><Data ss:Type="String">Upside %</Data></Cell>
+    <Cell ss:StyleID="HeaderStyle"><Data ss:Type="String">Capital Fit</Data></Cell>
+    <Cell ss:StyleID="HeaderStyle"><Data ss:Type="String">Core Thesis &amp; Strategic Moat</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Multi Comm. Exc. (MCX)</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">MCX</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">3645.0</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">51.72</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">93033.22</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">130.2</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">113.68</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">71.35</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">56.27</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="Number">515</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">22.7% (Low)</Data></Cell>
+    <Cell ss:StyleID="VerdictStrongBuy"><Data ss:Type="String">STRONG BUY</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹3,580 - ₹3,650</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹3,350.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹4,100.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹4,450.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">+12.5% to +22.1%</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Mid / Large (1-2 shares)</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">95%+ monopoly in Indian commodity derivatives; operating leverage post-TCS software migration</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">International Gemological Institute (IGI)</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">IGI</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">437.3</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">28.4</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">18906.86</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">43.19</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">31.04</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">69.25</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">55.81</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="Number">508</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">24.5% (Low)</Data></Cell>
+    <Cell ss:StyleID="VerdictStrongBuy"><Data ss:Type="String">STRONG BUY</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹425 - ₹440</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹398.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹510.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹560.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">+16.6% to +28.1%</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">All Budgets / Best for ₹5k-10k (10-12 shares)</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Global duopoly in diamond and lab-grown diamond certification; debt-free; lowest P/E among super-ROCE names</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Coforge Limited</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">COFORGE</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">2041.0</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">41.68</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">90473.28</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">67.4</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">53.64</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">23.5</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">21.41</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="Number">492</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">26.4% (Low)</Data></Cell>
+    <Cell ss:StyleID="VerdictStrongBuy"><Data ss:Type="String">STRONG BUY</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹2,000 - ₹2,045</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹1,880.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹2,350.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹2,500.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">+15.1% to +22.5%</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">All Budgets / ₹5k (2 shares)</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Outperforming Tier-1 IT peers; massive BFSI and airline tech deal wins; Cigniti integration</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Yash Highvoltage Limited</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">YASHVOLT</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">1264.9</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">61.5</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">3781.66</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">165.71</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">95.31</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">28.58</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">23.5</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="Number">486</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">37.3% (Low)</Data></Cell>
+    <Cell ss:StyleID="VerdictStrongBuy"><Data ss:Type="String">STRONG BUY / BREAKOUT</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹1,240 - ₹1,270</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹1,140.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹1,480.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹1,650.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">+17.0% to +30.4%</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">All Budgets / ₹5k (3-4 shares)</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Highest profit growth in screen (+165%); niche power transformer condenser bushing manufacturer in high demand</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">KMC Speciality Hospitals</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">KMCSHIL</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">201.64</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">53.69</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">3283.26</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">49.63</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">24.09</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">26.24</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">24.93</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="Number">470</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">31.8% (Low)</Data></Cell>
+    <Cell ss:StyleID="VerdictAccumulate"><Data ss:Type="String">ACCUMULATE ON DIPS</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹192 - ₹201</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹182.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹240.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹260.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">+19.0% to +29.0%</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">All Budgets / Best for ₹5k (20-24 shares)</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Regional tertiary healthcare leader; rising ARPOB & bed occupancy; ideal ₹201 low-ticket entry</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Radico Khaitan Limited</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">RADICO</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">4660.0</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">77.79</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">62504.56</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">66.49</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">16.81</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">24.15</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">20.26</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="Number">462</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">35.5% (Low)</Data></Cell>
+    <Cell ss:StyleID="VerdictAccumulate"><Data ss:Type="String">ACCUMULATE</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹4,500 - ₹4,620</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹4,220.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹5,250.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹5,600.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">+12.7% to +20.2%</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Mid / Large (1 share = ₹4,660)</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Premium spirits growth (Rampur, Jaisalmer, Royal Ranthambore); rising gross margins</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="Number">7</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Kwality Pharmaceuticals</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">KWALITY</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">4286.6</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">46.21</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">4461.27</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">105.59</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">63.19</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">24.08</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">22.64</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="Number">458</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">44.1% (Medium)</Data></Cell>
+    <Cell ss:StyleID="VerdictAccumulate"><Data ss:Type="String">ACCUMULATE ON DIPS</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹4,100 - ₹4,250</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹3,850.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹4,900.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹5,300.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">+14.3% to +23.6%</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Mid / Large (1 share = ₹4,286)</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Doubled Q2 profits (+105%); expanding sterile injectables & oncology formulations in export markets</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Quality Power Electrical Equip</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">QUALPOWER</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">1619.1</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">82.83</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">12540.59</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">74.43</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">32.45</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">31.73</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">25.27</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="Number">452</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">40.9% (Medium)</Data></Cell>
+    <Cell ss:StyleID="VerdictAccumulate"><Data ss:Type="String">ACCUMULATE ON DIPS</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹1,520 - ₹1,580</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹1,420.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹1,850.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹2,000.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">+14.3% to +23.5%</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">All Budgets / ₹5k (2-3 shares)</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">High-voltage electrical switchgear & substation equipment; P/E is high (82x), require dip entry</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="Number">9</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Kovai Medical Center & Hospital</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">KOVAI</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">6459.0</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">25.71</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">7056.09</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">30.77</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">20.57</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">22.55</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">20.46</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="Number">450</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">28.2% (Low)</Data></Cell>
+    <Cell ss:StyleID="VerdictAccumulate"><Data ss:Type="String">ACCUMULATE / VALUE COMPOUNDER</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹6,300 - ₹6,450</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹5,950.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹7,400.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹8,000.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">+14.6% to +23.9%</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Large Portfolios (High CMP ₹6,459)</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Lowest P/E in list (25.7x); high quality hospital operator in South India with high cash flow conversion</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Navin Fluorine International</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">NAVINFLUOR</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">10203.0</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">57.25</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">52448.15</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">81.46</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">57.0</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">20.96</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">19.82</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="Number">448</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">38.2% (Low)</Data></Cell>
+    <Cell ss:StyleID="VerdictAccumulate"><Data ss:Type="String">ACCUMULATE ON DIPS</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹9,800 - ₹10,100</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹9,200.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹11,800.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹12,500.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">+15.6% to +22.5%</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Large Portfolios (High CMP ₹10,203)</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Turnaround in CDMO and specialty fluorochemicals; strong 81% Q2 profit growth</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="Number">11</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Acutaas Chemical</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">ACUTAAS</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">3977.1</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">74.07</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">32525.92</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">73.27</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">42.69</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">31.56</Data></Cell>
+    <Cell ss:StyleID="NumberStyle"><Data ss:Type="Number">24.04</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="Number">440</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">42.0% (Medium)</Data></Cell>
+    <Cell ss:StyleID="VerdictAccumulate"><Data ss:Type="String">WATCHLIST / WAIT ON DIPS</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹3,750 - ₹3,850</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹3,520.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹4,400.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">₹4,700.00</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">+10.6% to +18.2%</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Mid / Large (1 share = ₹3,977)</Data></Cell>
+    <Cell ss:StyleID="DataStyle"><Data ss:Type="String">Specialty chemical intermediates; strong ROCE (31.5%) but P/E 74x requires waiting for minor correction</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+</Workbook>
